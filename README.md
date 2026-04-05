@@ -23,22 +23,19 @@ A data analytics web application for tracking personal income and expenses, buil
 | AI Insights | Groq API (LLaMA 3.3 70B) |
 
 ---
-
 ## 📁 Project Structure
-fintrack/
-│
-├── app.py                    # Main Streamlit app
-├── db/
-│   └── queries.py            # MySQL connection + SQL queries
-├── components/
-│   ├── dashboard.py          # Charts & analytics
-│   └── transactions.py       # Add/view/delete transactions
-├── ai/
-│   └── insights.py           # Groq AI integration
-├── .env.example              # Environment variables template
-└── requirements.txt
 
----
+    fintrack/
+    ├── app.py                    
+    ├── db/
+    │   └── queries.py            
+    ├── components/
+    │   ├── dashboard.py          
+    │   └── transactions.py       
+    ├── ai/
+    │   └── insights.py           
+    ├── .gitignore
+    └── requirements.txt
 
 ## ⚙️ Setup & Installation
 
