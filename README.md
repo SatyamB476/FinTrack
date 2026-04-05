@@ -51,11 +51,12 @@ pip install -r requirements.txt
 ```
 
 **3. Create `.env` file**
-DB_HOST=localhost
-DB_USER=your_mysql_user
-DB_PASSWORD=your_mysql_password
-DB_NAME=fintrack_db
-GROQ_API_KEY=your_groq_api_key
+
+    DB_HOST=localhost
+    DB_USER=your_mysql_user
+    DB_PASSWORD=your_mysql_password
+    DB_NAME=fintrack_db
+    GROQ_API_KEY=your_groq_api_key
 
 **4. Create MySQL database**
 ```sql
