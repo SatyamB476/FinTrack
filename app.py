@@ -2,8 +2,11 @@ import streamlit as st
 from components.transactions import show_transactions
 from components.dashboard import show_dashboard
 from ai.insights import get_ai_insights
-from db.queries import get_all_transactions
+from db.queries import get_all_transactions, init_db
 import pandas as pd
+
+# Initialize DB on startup
+init_db()
 
 st.set_page_config(
     page_title="FinTrack - Personal Finance Tracker",
@@ -21,10 +24,8 @@ menu = st.sidebar.radio("Navigation", [
 
 if menu == "Dashboard":
     show_dashboard()
-
 elif menu == "Transactions":
     show_transactions()
-
 elif menu == "AI Insights":
     st.subheader("🤖 AI Financial Insights")
     data = get_all_transactions()

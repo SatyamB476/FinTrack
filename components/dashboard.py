@@ -40,7 +40,9 @@ def show_dashboard():
     st.subheader("📈 Monthly Income vs Expense")
     monthly_df = df.groupby(['month', 'type'])['amount'].sum().reset_index()
     fig2 = px.bar(monthly_df, x='month', y='amount', color='type',
-                  barmode='group', title="Monthly Trend")
+              barmode='group', title="Monthly Trend",
+              color_discrete_map={'income': '#2ecc71', 'expense': '#e74c3c'},
+              category_orders={'type': ['income', 'expense']})
     st.plotly_chart(fig2, use_container_width=True)
 
     # ── DAY WISE SPENDING ──
